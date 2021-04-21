@@ -7,15 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F588BA126306B6E00FE817C /* baseline_flash_on_black_48pt_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F588B9F26306B6E00FE817C /* baseline_flash_on_black_48pt_3x.png */; };
+		6F588BA226306B6E00FE817C /* baseline_flash_off_black_48pt_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F588BA026306B6E00FE817C /* baseline_flash_off_black_48pt_3x.png */; };
+		6F588BA526306C1700FE817C /* baseline_flip_camera_ios_black_48pt_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F588BA426306C1700FE817C /* baseline_flip_camera_ios_black_48pt_3x.png */; };
+		6F588BAB26306CA500FE817C /* baseline_camera_black_48pt_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F588BAA26306CA500FE817C /* baseline_camera_black_48pt_3x.png */; };
+		6F588BC92630795A00FE817C /* music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F588BC42630795A00FE817C /* music2.mp3 */; };
+		6F588BCA2630795A00FE817C /* video3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6F588BC52630795A00FE817C /* video3.mp4 */; };
+		6F588BCB2630795A00FE817C /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F588BC62630795A00FE817C /* music1.mp3 */; };
+		6F588BCC2630795A00FE817C /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6F588BC72630795A00FE817C /* video1.mp4 */; };
+		6F588BCD2630795A00FE817C /* video2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6F588BC82630795A00FE817C /* video2.mp4 */; };
 		6F649D43263021EE00AE8C6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F649D42263021EE00AE8C6C /* AppDelegate.swift */; };
 		6F649D45263021EE00AE8C6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F649D44263021EE00AE8C6C /* SceneDelegate.swift */; };
 		6F649D47263021EE00AE8C6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F649D46263021EE00AE8C6C /* ViewController.swift */; };
 		6F649D4A263021EE00AE8C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F649D48263021EE00AE8C6C /* Main.storyboard */; };
 		6F649D4C263021F700AE8C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F649D4B263021F700AE8C6C /* Assets.xcassets */; };
 		6F649D4F263021F700AE8C6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F649D4D263021F700AE8C6C /* LaunchScreen.storyboard */; };
+		6F649D6926305EC400AE8C6C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F649D6826305EC400AE8C6C /* CameraViewController.swift */; };
+		6F649D6E2630647F00AE8C6C /* baseline_flash_off_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F649D6B2630647F00AE8C6C /* baseline_flash_off_black_24dp.png */; };
+		6F649D6F2630647F00AE8C6C /* baseline_camera_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F649D6C2630647F00AE8C6C /* baseline_camera_black_24dp.png */; };
+		6F649D702630647F00AE8C6C /* baseline_cameraswitch_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F649D6D2630647F00AE8C6C /* baseline_cameraswitch_black_24dp.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F588B9F26306B6E00FE817C /* baseline_flash_on_black_48pt_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_flash_on_black_48pt_3x.png; sourceTree = "<group>"; };
+		6F588BA026306B6E00FE817C /* baseline_flash_off_black_48pt_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_flash_off_black_48pt_3x.png; sourceTree = "<group>"; };
+		6F588BA426306C1700FE817C /* baseline_flip_camera_ios_black_48pt_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_flip_camera_ios_black_48pt_3x.png; sourceTree = "<group>"; };
+		6F588BAA26306CA500FE817C /* baseline_camera_black_48pt_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_camera_black_48pt_3x.png; sourceTree = "<group>"; };
+		6F588BC42630795A00FE817C /* music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music2.mp3; sourceTree = "<group>"; };
+		6F588BC52630795A00FE817C /* video3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video3.mp4; sourceTree = "<group>"; };
+		6F588BC62630795A00FE817C /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music1.mp3; sourceTree = "<group>"; };
+		6F588BC72630795A00FE817C /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
+		6F588BC82630795A00FE817C /* video2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.mp4; sourceTree = "<group>"; };
 		6F649D3F263021EE00AE8C6C /* Homework13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F649D42263021EE00AE8C6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F649D44263021EE00AE8C6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +46,10 @@
 		6F649D4B263021F700AE8C6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F649D4E263021F700AE8C6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F649D50263021F700AE8C6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F649D6826305EC400AE8C6C /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		6F649D6B2630647F00AE8C6C /* baseline_flash_off_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_flash_off_black_24dp.png; sourceTree = "<group>"; };
+		6F649D6C2630647F00AE8C6C /* baseline_camera_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_camera_black_24dp.png; sourceTree = "<group>"; };
+		6F649D6D2630647F00AE8C6C /* baseline_cameraswitch_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_cameraswitch_black_24dp.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +86,22 @@
 				6F649D44263021EE00AE8C6C /* SceneDelegate.swift */,
 				6F649D46263021EE00AE8C6C /* ViewController.swift */,
 				6F649D48263021EE00AE8C6C /* Main.storyboard */,
+				6F649D6826305EC400AE8C6C /* CameraViewController.swift */,
 				6F649D4B263021F700AE8C6C /* Assets.xcassets */,
 				6F649D4D263021F700AE8C6C /* LaunchScreen.storyboard */,
 				6F649D50263021F700AE8C6C /* Info.plist */,
+				6F649D6C2630647F00AE8C6C /* baseline_camera_black_24dp.png */,
+				6F649D6D2630647F00AE8C6C /* baseline_cameraswitch_black_24dp.png */,
+				6F649D6B2630647F00AE8C6C /* baseline_flash_off_black_24dp.png */,
+				6F588BA026306B6E00FE817C /* baseline_flash_off_black_48pt_3x.png */,
+				6F588B9F26306B6E00FE817C /* baseline_flash_on_black_48pt_3x.png */,
+				6F588BAA26306CA500FE817C /* baseline_camera_black_48pt_3x.png */,
+				6F588BA426306C1700FE817C /* baseline_flip_camera_ios_black_48pt_3x.png */,
+				6F588BC72630795A00FE817C /* video1.mp4 */,
+				6F588BC82630795A00FE817C /* video2.mp4 */,
+				6F588BC52630795A00FE817C /* video3.mp4 */,
+				6F588BC62630795A00FE817C /* music1.mp3 */,
+				6F588BC42630795A00FE817C /* music2.mp3 */,
 			);
 			path = Homework13;
 			sourceTree = "<group>";
@@ -124,9 +163,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F588BCC2630795A00FE817C /* video1.mp4 in Resources */,
 				6F649D4F263021F700AE8C6C /* LaunchScreen.storyboard in Resources */,
+				6F588BA126306B6E00FE817C /* baseline_flash_on_black_48pt_3x.png in Resources */,
+				6F588BA226306B6E00FE817C /* baseline_flash_off_black_48pt_3x.png in Resources */,
+				6F649D6F2630647F00AE8C6C /* baseline_camera_black_24dp.png in Resources */,
+				6F649D6E2630647F00AE8C6C /* baseline_flash_off_black_24dp.png in Resources */,
+				6F588BCD2630795A00FE817C /* video2.mp4 in Resources */,
+				6F588BA526306C1700FE817C /* baseline_flip_camera_ios_black_48pt_3x.png in Resources */,
 				6F649D4C263021F700AE8C6C /* Assets.xcassets in Resources */,
+				6F588BC92630795A00FE817C /* music2.mp3 in Resources */,
+				6F588BCA2630795A00FE817C /* video3.mp4 in Resources */,
+				6F588BCB2630795A00FE817C /* music1.mp3 in Resources */,
 				6F649D4A263021EE00AE8C6C /* Main.storyboard in Resources */,
+				6F588BAB26306CA500FE817C /* baseline_camera_black_48pt_3x.png in Resources */,
+				6F649D702630647F00AE8C6C /* baseline_cameraswitch_black_24dp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F649D47263021EE00AE8C6C /* ViewController.swift in Sources */,
+				6F649D6926305EC400AE8C6C /* CameraViewController.swift in Sources */,
 				6F649D43263021EE00AE8C6C /* AppDelegate.swift in Sources */,
 				6F649D45263021EE00AE8C6C /* SceneDelegate.swift in Sources */,
 			);
