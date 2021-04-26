@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F165D1B2637517A00A57CE0 /* video3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6F165D1A2637517A00A57CE0 /* video3.mp4 */; };
 		6F588BA126306B6E00FE817C /* baseline_flash_on_black_48pt_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F588B9F26306B6E00FE817C /* baseline_flash_on_black_48pt_3x.png */; };
 		6F588BA226306B6E00FE817C /* baseline_flash_off_black_48pt_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F588BA026306B6E00FE817C /* baseline_flash_off_black_48pt_3x.png */; };
 		6F588BA526306C1700FE817C /* baseline_flip_camera_ios_black_48pt_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F588BA426306C1700FE817C /* baseline_flip_camera_ios_black_48pt_3x.png */; };
@@ -26,10 +27,10 @@
 		6F649D6F2630647F00AE8C6C /* baseline_camera_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F649D6C2630647F00AE8C6C /* baseline_camera_black_24dp.png */; };
 		6F649D702630647F00AE8C6C /* baseline_cameraswitch_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F649D6D2630647F00AE8C6C /* baseline_cameraswitch_black_24dp.png */; };
 		6FD9AB782636C5920074F898 /* AssetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9AB772636C5920074F898 /* AssetStore.swift */; };
-		6FD9AB7C2636CEDB0074F898 /* video3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6FD9AB7B2636CEDB0074F898 /* video3.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F165D1A2637517A00A57CE0 /* video3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video3.mp4; sourceTree = "<group>"; };
 		6F588B9F26306B6E00FE817C /* baseline_flash_on_black_48pt_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_flash_on_black_48pt_3x.png; sourceTree = "<group>"; };
 		6F588BA026306B6E00FE817C /* baseline_flash_off_black_48pt_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_flash_off_black_48pt_3x.png; sourceTree = "<group>"; };
 		6F588BA426306C1700FE817C /* baseline_flip_camera_ios_black_48pt_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_flip_camera_ios_black_48pt_3x.png; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		6F649D6C2630647F00AE8C6C /* baseline_camera_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_camera_black_24dp.png; sourceTree = "<group>"; };
 		6F649D6D2630647F00AE8C6C /* baseline_cameraswitch_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_cameraswitch_black_24dp.png; sourceTree = "<group>"; };
 		6FD9AB772636C5920074F898 /* AssetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetStore.swift; sourceTree = "<group>"; };
-		6FD9AB7B2636CEDB0074F898 /* video3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = video3.mp4; path = ../../../../../../Downloads/video3.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 				6F588BC52630795A00FE817C /* video1.mp4 */,
 				6F588BC62630795A00FE817C /* music1.mp3 */,
 				6F588BC42630795A00FE817C /* music2.mp3 */,
-				6FD9AB7B2636CEDB0074F898 /* video3.mp4 */,
+				6F165D1A2637517A00A57CE0 /* video3.mp4 */,
 			);
 			path = Homework13;
 			sourceTree = "<group>";
@@ -169,6 +169,7 @@
 				6F649D4F263021F700AE8C6C /* LaunchScreen.storyboard in Resources */,
 				6F588BA126306B6E00FE817C /* baseline_flash_on_black_48pt_3x.png in Resources */,
 				6F588BA226306B6E00FE817C /* baseline_flash_off_black_48pt_3x.png in Resources */,
+				6F165D1B2637517A00A57CE0 /* video3.mp4 in Resources */,
 				6F649D6F2630647F00AE8C6C /* baseline_camera_black_24dp.png in Resources */,
 				6F649D6E2630647F00AE8C6C /* baseline_flash_off_black_24dp.png in Resources */,
 				6F588BCD2630795A00FE817C /* video2.mp4 in Resources */,
@@ -179,7 +180,6 @@
 				6F588BCB2630795A00FE817C /* music1.mp3 in Resources */,
 				6F649D4A263021EE00AE8C6C /* Main.storyboard in Resources */,
 				6F588BAB26306CA500FE817C /* baseline_camera_black_48pt_3x.png in Resources */,
-				6FD9AB7C2636CEDB0074F898 /* video3.mp4 in Resources */,
 				6F649D702630647F00AE8C6C /* baseline_cameraswitch_black_24dp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
