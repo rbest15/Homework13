@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         playerLayer.frame = self.view.bounds
 //        playerLayer.anchorPoint = self.view.center
         self.view.layer.addSublayer(playerLayer)
-        player.playImmediately(atRate: 2)
+        player.play()
     }
     
     func createSaveButton() {
@@ -61,7 +61,6 @@ class ViewController: UIViewController {
             }
         }
     }
-
 
 }
 

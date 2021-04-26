@@ -43,10 +43,6 @@ class AssetStore {
         guard let audioTrack1 = composition.addMutableTrack(withMediaType: .audio, preferredTrackID: Int32(kCMPersistentTrackID_Invalid)) else { fatalError() }
         guard let audioTrack2 = composition.addMutableTrack(withMediaType: .audio, preferredTrackID: Int32(kCMPersistentTrackID_Invalid)) else { fatalError() }
         
-        guard let bounds = self.rect else {
-            fatalError()
-        }
-        
         let transitionDuration1 = CMTime(seconds: 1, preferredTimescale: 600)
         let transitionDuration2 = CMTime(seconds: 1, preferredTimescale: 600)
         let transitionRange1 = CMTimeRange(start: video1.duration - transitionDuration1, duration: transitionDuration1)
@@ -101,13 +97,12 @@ class AssetStore {
         fadeOutLayerInstruction1.setTransform(video1.preferredTransform, at: CMTime.zero)
         fadeInLayerInstruction1.setTransform(video2.preferredTransform, at: CMTime.zero)
         
-        fadeInLayerInstruction1.setTransformRamp(fromStart: CGAffineTransform(translationX: -1170, y: 1), toEnd: CGAffineTransform(translationX: 1, y: 1), timeRange: transitionRange1)
-        fadeOutLayerInstruction1.setTransformRamp(fromStart: CGAffineTransform(translationX: 1, y: 1), toEnd: CGAffineTransform(translationX: 1170, y: 1), timeRange: transitionRange1)
+        fadeInLayerInstruction1.setTransformRamp(fromStart: CGAffineTransform(translationX: -1200, y: 1), toEnd: CGAffineTransform(translationX: 1, y: 1), timeRange: transitionRange1)
+        fadeOutLayerInstruction1.setTransformRamp(fromStart: CGAffineTransform(translationX: 1, y: 1), toEnd: CGAffineTransform(translationX: 1200, y: 1), timeRange: transitionRange1)
         
     
         fadeOutLayerInstruction2.setTransform(video2.preferredTransform, at: CMTime.zero)
         fadeInLayerInstruction2.setTransform(video3.preferredTransform, at: CMTime.zero)
-        fadeInLayerInstruction2.setTransform(CGAffineTransform(translationX: 1.5, y: 1.5), at: transitionRange2.start)
     
         fadeInLayerInstruction2.setTransformRamp(fromStart: CGAffineTransform(scaleX: 0.001, y: 0.001), toEnd: CGAffineTransform(scaleX: 1, y: 1), timeRange: transitionRange2)
         
