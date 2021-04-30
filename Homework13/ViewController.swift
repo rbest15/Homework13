@@ -7,7 +7,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        store.rect = self.view.frame
+        store.delegate = self
         createSaveButton()
     }
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         createSaveButton()
     }
     
-    func startPlaying(asset: AVAsset, videoComposition: AVVideoComposition) {
+    func startPlaying(asset: AVAsset, videoComposition: AVMutableVideoComposition) {
         self.view.layer.sublayers?.forEach({ (layer) in
             layer.removeFromSuperlayer()
         })
@@ -27,7 +27,10 @@ class ViewController: UIViewController {
         let player = AVPlayer(playerItem: playerItem)
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = self.view.bounds
-//        playerLayer.anchorPoint = self.view.center
+
+        createAndAddCircleToTheLayer(videoLayer: playerLayer, forComp: videoComposition)
+
+        
         self.view.layer.addSublayer(playerLayer)
         player.play()
     }
@@ -44,7 +47,6 @@ class ViewController: UIViewController {
     
     @objc func saveButtonPressed() {
         store.export(asset: store.compose().0) { (complete) in
-
             switch complete.status {
             case .completed :
                 let alert = UIAlertController(title: "Saved successfully", message: nil, preferredStyle: .alert)
@@ -62,5 +64,42 @@ class ViewController: UIViewController {
         }
     }
 
+    func createAndAddCircleToTheLayer(videoLayer: CALayer, forComp: AVMutableVideoComposition){
+        let videoSize = videoLayer.frame.size
+        
+        let overlayLayer = CALayer()
+        overlayLayer.frame = CGRect(origin: .zero, size: videoSize)
+        
+        let width: CGFloat = 50.0
+        let height: CGFloat = 50.0
+        
+        let myLayer = CALayer()
+        myLayer.frame = CGRect(x: 0, y: 0, width: width, height: height)
+        myLayer.backgroundColor = UIColor.white.cgColor
+        myLayer.cornerRadius = width / 2
+        myLayer.masksToBounds = true
+        
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.fromValue = CGPoint(x: 0, y: 0)
+        animation.toValue = CGPoint(x: videoSize.width, y: videoSize.height)
+        
+        animation.duration = 43
+        animation.autoreverses = false
+        animation.repeatCount = 1
+        animation.beginTime = AVCoreAnimationBeginTimeAtZero
+        
+        myLayer.add(animation, forKey: "animatePosition")
+        
+        overlayLayer.addSublayer(myLayer)
+
+        let outputLayer = CALayer()
+        outputLayer.frame = CGRect(origin: .zero, size: videoSize)
+        outputLayer.addSublayer(videoLayer)
+        outputLayer.addSublayer(overlayLayer)
+        
+        forComp.animationTool = AVVideoCompositionCoreAnimationTool(
+        postProcessingAsVideoLayer: videoLayer,
+        in: outputLayer)
+    }
 }
 

@@ -10,7 +10,6 @@ class AssetStore {
     let music2: AVAsset
     
     var delegate : ViewController?
-    var rect : CGRect?
     
     init(video1: AVAsset, video2: AVAsset, video3: AVAsset, music1: AVAsset, music2: AVAsset) {
         self.video1 = video1
@@ -33,7 +32,7 @@ class AssetStore {
         return AssetStore(video1: asset("video1", "mp4"), video2: asset("video2", "mp4"), video3: asset("video3", "mp4"), music1: asset("music1", "mp3"), music2: asset("music2", "mp3"))
     }
 
-    func compose() -> (AVAsset, AVVideoComposition) {
+    func compose() -> (AVAsset, AVMutableVideoComposition) {
         
         //MARK: - create composition
         let composition = AVMutableComposition()
@@ -97,14 +96,19 @@ class AssetStore {
         fadeOutLayerInstruction1.setTransform(video1.preferredTransform, at: CMTime.zero)
         fadeInLayerInstruction1.setTransform(video2.preferredTransform, at: CMTime.zero)
         
-        fadeInLayerInstruction1.setTransformRamp(fromStart: CGAffineTransform(translationX: -1200, y: 1), toEnd: CGAffineTransform(translationX: 1, y: 1), timeRange: transitionRange1)
-        fadeOutLayerInstruction1.setTransformRamp(fromStart: CGAffineTransform(translationX: 1, y: 1), toEnd: CGAffineTransform(translationX: 1200, y: 1), timeRange: transitionRange1)
+        let video1W = videoTrack1.naturalSize.width
+        
+        fadeInLayerInstruction1.setTransformRamp(fromStart: CGAffineTransform(translationX: -video1W, y: 1), toEnd: CGAffineTransform(translationX: 1, y: 1), timeRange: transitionRange1)
+        fadeOutLayerInstruction1.setTransformRamp(fromStart: CGAffineTransform(translationX: 1, y: 1), toEnd: CGAffineTransform(translationX: video1W, y: 1), timeRange: transitionRange1)
         
     
         fadeOutLayerInstruction2.setTransform(video2.preferredTransform, at: CMTime.zero)
         fadeInLayerInstruction2.setTransform(video3.preferredTransform, at: CMTime.zero)
+        
+        let video3W = videoTrack3.naturalSize.width
+        let video3H = videoTrack3.naturalSize.height
     
-        fadeInLayerInstruction2.setTransformRamp(fromStart: CGAffineTransform(scaleX: 0.001, y: 0.001), toEnd: CGAffineTransform(scaleX: 1, y: 1), timeRange: transitionRange2)
+        fadeInLayerInstruction2.setCropRectangleRamp(fromStartCropRectangle: CGRect(x: video3W / 2, y: video3H / 2, width: 0, height: 0), toEndCropRectangle: CGRect(x: 0, y: 0, width: video3W, height: video3H), timeRange: transitionRange2)
         
         //MARK: - composition compilating
         let videoComposition = AVMutableVideoComposition(propertiesOf: composition)
@@ -113,9 +117,7 @@ class AssetStore {
         instruction2.layerInstructions = [fadeInLayerInstruction2, fadeOutLayerInstruction2]
         videoComposition.instructions = [passTroughInstruction1, instruction1, passTroughInstruction2, instruction2, passTroughInstruction3]
         
-//        print(composition.duration.seconds.rounded(), videoComposition.instructions.forEach({ (comp) in
-//            print(comp.timeRange.duration.seconds.rounded())
-//        }))
+        
         return (composition, videoComposition)
     }
     
@@ -147,4 +149,5 @@ class AssetStore {
         self.delegate?.present(alert, animated: true)
     }
 }
+
 
